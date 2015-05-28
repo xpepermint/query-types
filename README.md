@@ -5,13 +5,13 @@
 ## Setup
 
 ```
-$ npm install --save query-type
+$ npm install --save query-types
 ```
 
 ## Usage
 
 ```js
-var queryType = require('query-type');
+var queryType = require('query-types');
 var express = require('express');
 
 app.use(queryType.middleware())
