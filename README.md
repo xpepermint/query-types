@@ -1,4 +1,4 @@
-# blankgif
+# query-types
 
 > Handles numeric and boolean values for Express req.query object.
 
