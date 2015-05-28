@@ -1,0 +1,33 @@
+{
+  "name": "query-types",
+  "version": "0.1.0",
+  "description": "Handles numeric and boolean values for Express req.query object.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:xpepermint/query-types.git"
+  },
+  "keywords": [
+    "query",
+    "parser",
+    "boolean",
+    "number",
+    "numeric",
+    "integer",
+    "float",
+    "type",
+    "types",
+    "querystring",
+    "express",
+    "connect"
+  ],
+  "author": "Xpepermint",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xpepermint/query-types/issues"
+  },
+  "homepage": "https://github.com/xpepermint/query-types"
+}
