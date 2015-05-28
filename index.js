@@ -64,7 +64,9 @@ function parseBoolean(val) {
   return val === 'true';
 }
 
-function middleware(req, res, next) {
-  req.query = parseObject(req.query);
-  next();
+function middleware() {
+  return function(req, res, next) {
+    req.query = parseObject(req.query);
+    next();
+  }
 }
