@@ -14,7 +14,7 @@ function isObject(val) {
 }
 
 function isNumber(val) {
-  return Number.isFinite(Number(val));
+  return !isNaN(parseFloat(val)) && isFinite(val);
 }
 
 function isBoolean(val) {
@@ -26,14 +26,16 @@ function isArray(val) {
 }
 
 function parseValue(val) {
-  if (isNumber(val)) {
-    return parseNumber(val);
+  if (typeof val == 'undefined' || val == '') {
+    return null;
   } else if (isBoolean(val)) {
     return parseBoolean(val);
   } else if (isArray(val)) {
     return parseArray(val);
   } else if (isObject(val)) {
     return parseObject(val);
+  } else if (isNumber(val)) {
+    return parseNumber(val);
   } else {
     return val;
   }
@@ -41,9 +43,10 @@ function parseValue(val) {
 
 function parseObject(obj) {
   var result = {};
-  var key;
+  var key, val;
   for (key in obj) {
-    result[key] = parseValue(obj[key]);
+    val = parseValue(obj[key]);
+    if (val) result[key] = val; // ignore null values
   }
   return result;
 }
