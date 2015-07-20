@@ -46,7 +46,7 @@ function parseObject(obj) {
   var key, val;
   for (key in obj) {
     val = parseValue(obj[key]);
-    if (val) result[key] = val; // ignore null values
+    if (val !== undefined && val !== null) result[key] = val; // ignore null values
   }
   return result;
 }
